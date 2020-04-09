@@ -125,7 +125,7 @@ void setup()
   Serial.println();
   Serial.println(F("103_LoRa_Transmitter_Detailed_Setup Starting"));
 
-  SPI.begin();
+ SPI.begin(SCK, MISO, MOSI, NSS);
 
   //SPI beginTranscation is normally part of library routines, but if it is disabled in library
   //a single instance is needed here, so uncomment the program line below
